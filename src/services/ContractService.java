@@ -8,17 +8,9 @@ import java.util.Date;
 
 public class ContractService {
 
-    private OnlinePaymentService onlinePaymentService;
+    private final OnlinePaymentService onlinePaymentService;
 
     public ContractService(OnlinePaymentService onlinePaymentService) {
-        this.onlinePaymentService = onlinePaymentService;
-    }
-
-    public OnlinePaymentService getOnlinePaymentService() {
-        return onlinePaymentService;
-    }
-
-    public void setOnlinePaymentService(OnlinePaymentService onlinePaymentService) {
         this.onlinePaymentService = onlinePaymentService;
     }
 

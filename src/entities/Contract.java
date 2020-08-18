@@ -6,20 +6,14 @@ import java.util.List;
 
 public class Contract {
 
-    private final Integer number;
     private final Date date;
     private final Double totalValue;
 
     private final List<Installment> installments = new ArrayList<>();
 
-    public Contract(Integer number, Date date, Double totalValue) {
-        this.number = number;
+    public Contract(Date date, Double totalValue) {
         this.date = date;
-        this.totalValue = totalValue;;
-    }
-
-    public Integer getNumber() {
-        return number;
+        this.totalValue = totalValue;
     }
 
     public Date getDate() {
@@ -38,7 +32,4 @@ public class Contract {
         installments.add(installment);
     }
 
-    public void removeInstallment(Installment installment) {
-        installments.remove(installment);
-    }
 }

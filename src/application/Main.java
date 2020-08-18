@@ -19,17 +19,15 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        List<Installment> installments = new ArrayList<>();
-
         System.out.println("Enter contract data: ");
         System.out.print("Number: ");
-        int number = sc.nextInt();
+        sc.nextInt();
         System.out.print("Date (DD/MM/YYYY): ");
         Date date = sdf.parse(sc.next());
         System.out.print("Contract value: ");
         double totalValue = sc.nextDouble();
 
-        Contract contract = new Contract(number, date, totalValue);
+        Contract contract = new Contract(date, totalValue);
 
         ContractService contractService = new ContractService(new PayPalService());
 
